@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./*.{html,js}"],
   theme: {
     
     extend: {
-      backgroundImage: "url('./images/bgcircle.png')"
+      backgroundImage: "url('./src/Images/bgcircle.png')"
     },    
     backgroundColor: {
       'warn-white': '#FBF3D5',
