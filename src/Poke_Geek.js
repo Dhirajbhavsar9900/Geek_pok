@@ -76,7 +76,7 @@ function creatCard(details){
          
         <div class="bg-[url('./images/bgcircle.png')] bg-cover h-[150px]  ">
             <div class="w-[291px]">
-                <p class="text-center bg-black w-[90px] text-xl text-white  mx-[79px] rounded-[19px]">${details.id}
+                <p class="text-center bg-black w-[90px] text-xl text-white  mx-[100px] rounded-[19px]">${details.id}
                 <h1 class="text-2xl font-bold text-black text-center bg-warn-white rounded-lg mt-[14px]  mx-[50px]">${details.name}</h1>
                 <div id="heading2" class="bg-light-yellow ">
                 <h2 class="text-center text-black font-bold mt-[10px] b">Type: ${details.types[0].type.name}</h2> 

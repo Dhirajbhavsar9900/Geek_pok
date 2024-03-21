@@ -594,6 +594,21 @@ video {
   margin-right: 2.5rem;
 }
 
+.mx-\[px\] {
+  margin-left: px;
+  margin-right: px;
+}
+
+.mx-\[80px\] {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.mx-\[100px\] {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
