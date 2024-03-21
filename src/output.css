@@ -548,6 +548,14 @@ video {
   position: sticky;
 }
 
+.z-\[-10\] {
+  z-index: -10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .m-10 {
   margin: 2.5rem;
 }
@@ -742,6 +750,18 @@ video {
   width: 50px;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[291\] {
+  width: 291;
+}
+
+.w-\[291px\] {
+  width: 291px;
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -792,6 +812,10 @@ video {
 
 .gap-\[10px\] {
   gap: 10px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
