@@ -12,10 +12,24 @@ module.exports = {
       'dark-red' : '#af0404',
       'black' : '#222831',
       'white' : 'white',
-      'orange': '#f96d00',
       'dark' : '#ffb400',
-      'light-yellow': '#FFD23F'
+      'light-yellow': '#FFD23F',
+      'orange': 'F55555',
     },
+    dropShadow: {
+      '3xl': '-5px -1px 2px rgba(0, 0, 0, 0.40)',
+      '4xl': [
+          '0 35px 35px rgba(0, 0, 0, 0.25)',
+          '0 45px 65px rgba(0, 0, 0, 0.15)'
+      ]
+    },
+    backgroundImage: {
+      'radial-gradient': 'linear-gradient(90deg, rgba(255,245,219,1) 1%, rgba(255,254,242,1) 52%, rgba(255,240,204,1) 100%, rgba(255,235,184,1) 100%)',
+    },
+    fontFamily: {
+      customFont: ['"Helvetica Neue"', "sans-serif"],
+    },
+   
   },
   plugins: [],
 }

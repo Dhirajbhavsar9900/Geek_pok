@@ -11,30 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Antique&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-r from-amber-400 to-yellow-300  o">
+<body class="bg-radial-gradient ">
 
-    <nav class="flex justify-center  border-red-800 border-double border-[5px] rounded-[50px]  mt-6 mx-[500px] mb-6 ">
+    <nav class="flex justify-center gap-[500px] mt-6 mb-6 ">
 
-        <img src="./src/Images/charli.gif" alt="" class="mr-[60px] m-6 w-[100px]">
-       
-        <img src="./src/Images/pokemon.png" alt="" class="w-[210px] animate__animated animate__flip mr-7">
-        <img src="./src/Images/pokeball.png" alt="" class="w-[110px] h-[120px] mt-[50px] ml-[30px] animate-bounce">
+        <img src="./src/Images/pokemon.png" alt="" class="w-[11%] animate__animated animate__flip mr-8">
         
-        <!-- <ul class="flex justify-between gap-9 py-16 text-black font-sans font-bold text-center ">
-            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4"><a href="./index.html">Home</a></li>
-            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4"><a href="./about.html">About</a></li>
-            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4"><a href="./contact.html">Contact</a></li>
-            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4"><a href="./index.html">Home</a></li>
-            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4"><a href="./about.html">About</a></li>
-        </ul> -->
+        <ul class="flex justify-between gap-9 py-16 text-black font-sans font-bold text-center ">
+            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4 hover:bg-light-yellow cursor-pointer "><a href="./index.html">Home</a></li>
+            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4 hover:bg-light-yellow cursor-pointer"><a href="./about.html">About</a></li>
+            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4 hover:bg-light-yellow cursor-pointer"><a href="./contact.html">Contact</a></li>
+            <li class=" bg-black w-[100px] rounded text-white p-3 pb-4 hover:bg-light-yellow cursor-pointer"><a href="./index.html">Home</a></li>
+        </ul>
     </nav>
+
+
+
     <header class="">
-        
         <section class="">
-          
-            
+            <div class="w-[100%]">
+                <video src="./src/Images/bg.mp4" class=""  autoplay loop></video>
+            </div>
+        </section>
+        <section class="">
             <div class="flex justify-center mt-[0px] sticky ">
                 <select name="" id="type" class="mr-2 w-[90px] pr-[15px]  pl-[10px] rounded shadow-2xl font-bold ">
                     <option value="grass" id="select">Grass</option>
@@ -55,10 +57,11 @@
                 </select>
                 <button id="filter" class="text-sm w-[100px] bg-red ml-2 rounded text-white font-bold shadow-2xl mr-4 hover:bg-dark-red hover:transition-all">Filter</button>
                 <input placeholder="Search Your Pokemon" id="search" type="search" class=" w-[300px] p-[11px] bg-slate-50 rounded shadow-2xl">
-                <button id="searchBtn" class="text-sm w-[100px] bg-black ml-3 rounded text-white font-bold shadow-2xl hover:bg-warn-white hover:transition-all hover:duration-200 hover:text-black ">Search</button>
+                <button id="searchBtn" class="text-sm w-[100px] bg-black ml-3 rounded text-white font-bold shadow-2xl hover:bg-light-yellow hover:transition-all hover:duration-200 hover:text-black ">Search</button>
 
                 <a href="./index.html"
-                    class="text-sm w-[100px] bg-black ml-3 rounded text-white font-bold shadow-2xl hover:bg-warn-white hover:transition-all hover:duration-200 hover:text-black p-3 text-center">Reset</a>
+                    class="text-sm w-[100px] bg-black ml-3 rounded text-white font-bold shadow-2xl hover:bg-light-yellow hover:transition-all hover:duration-200 hover:text-black p-3 text-center">Reset
+                </a>
             </div>
         </section>
         

@@ -28,39 +28,31 @@
 
 
 let cardContainer = document.querySelector("#cards-container");
-
 let searching = document.querySelector("#search");
 let searchBtn = document.querySelector("#searchBtn");
-
 let filterBtn = document.querySelector("#filter");
-
 let select = document.querySelector("#select");
 let types = document.querySelector("#type");
 console.log(select, types);
 
-
-
-
 let colors = {
-    grass: '#38ba00',
-    fire:'red',
+    grass: 'pink',
+    fire:'#CE9FFC',
     water: '#008cff',
     bug: '#ffcd4a',
-    normal : 'gray',
-    poison : 'black',
+    normal : '#28C76F',
+    poison : '#130CB7',
     ice: 'purple',
     electric: `#87CEEB`,
-    ground: '#ff0f6e',
+    ground: '#E80505',
     fairy : `brown`,
     fighting: '#d56912',
-    physic: '#8a1080',
+    physic: '#F067B4    ',
     rock: 'yellow',
     ghost: '#002536',
     dragon: '#f70054',
-   
     psychic: '#bfa032',
-    
-   
+
 }
 
 function creatCard(details){
@@ -68,29 +60,34 @@ function creatCard(details){
     card.classList.add('card');
     
     card.innerHTML = `
-    <div id="inner" class="bg-red-600 flex flex-col justify-center items-center  rounded-3xl shadow-xl cursor-pointer pb-[0px] animate__animated animate__fadeIn">
-         <img src="${details.sprites.front_default}" class="w-[160px] hover:animate-bounce cursor-pointer ">
-            <p class="text-center bg-black w-[90px] text-xl text-white  mx-[100px] rounded-[19px]">${details.id}
-            <h1 class=" px-[10px] text-[18px] font-bold text-black text-center bg-warn-white rounded mt-[14px]  mx-[]">Name: ${details.name}</h1>
-               
-        <div class="w-[215px] m-3"> 
-            <div id="heading2" class="bg-light-yellow  ">
-                <h2 class="text-center text-black font-bold mt-[10px] ">Type: ${details.types[0].type.name}</h2> 
-            </div>
+    <div id="inner" class="flex flex-col justify-center items-center  rounded-3xl shadow-xl cursor-pointer pb-[0px] animate__animated animate__fadeIn border-solid border-black border-[3px] ">
+
+        <div class="flex text-xl rounded-b-2xl leading-[2.75rem] justify-center">
+            <div class="flex flex-col">
+                <div class="bg-black w-[35px] h-[40px] rounded-b-lg ml-[20px]">
+                    <p class=" text-white text-center font-[800] text-[16px]">#${details.id}
+                </div>
+                
+                <div class="flex justify-items-center justify-center">
+                    <img src="${details.sprites.other.home.front_default}" class="w-[160px] hover:animate-bounce cursor-pointer filter drop-shadow-3xl ">
+                </div>
+                
 
 
-            <div class="flex justify-center gap-[10px] bg-warn-white"> 
-                <span class="text-black font-bold">Abilities: ${details.abilities[0].ability.name} </span>   
-            </div>
+                <div class=" mx-[40px]">
+                     <h2 id="poke-type" class="text-center font-[800] text-black text-[14px]  ">Type: ${details.types[0].type.name}</h2>
+                </div>
 
-            
-            <div class="flex justify-center gap-[10px]  mb-[15px] bg-red"> 
-                <span class=" font-bold">Height: ${details.height}</span>   
-                <span class=" font-bold">Weigth: ${details.weight}</span>   
-            </div>
-            
+                <div class="flex flex-col mb-[10px] ">
+                    <h1 id="pokemon-name" class="font-[800] text-center bg-warn-white text-black">Name: ${details.name}</h1>  
+                <div>  
 
-        </div>     
+                <div class="flex justify-between gap-[20px] bg-red w-[209px] mb-[10px] p-[10px]">
+                    <span class="font-[800]  text-sm/[16px] text-white">height: ${details.height}</span>
+                    <span class="font-[800] text-sm/[16px] text-white">width: ${details.weight}</span>
+                </div>        
+            </div>            
+        </div>
     </div>`
     card.querySelector("#inner").style.backgroundColor= colors[details.types[0].type.name]
     return card;
@@ -102,7 +99,7 @@ function filterByType(type) {
     let allCards = document.querySelectorAll(".card");
 
     allCards.forEach((card) => {
-        let pokemonType = card.querySelector("h2").innerText.toLowerCase();
+        let pokemonType = card.querySelector("h1").innerText.toLowerCase();
 
         if (type === "all" || pokemonType === type) {
             card.style.display = "block";
@@ -123,7 +120,7 @@ searchBtn.addEventListener('click', () => {
     let searchValue = searching.value.toLowerCase(); 
 
     allCards.forEach((card) => {
-        let pokemonName = card.querySelector("h1").innerText.toLowerCase(); 
+        let pokemonName = card.querySelector("h2").innerText.toLowerCase(); 
 
         if (pokemonName.includes(searchValue)) {
             card.style.display = "block"; 
